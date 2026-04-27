@@ -1,36 +1,63 @@
 # 5 Formas de Reduzir Custo com Claude Code
 
-Voce esta queimando dinheiro em ferramenta SaaS que o Claude Code substitui hoje.
+5 aplicacoes especificas pra cortar gastos em ferramentas SaaS. Implementa hoje, economiza esse mes.
 
-Este pacote tem **5 prompts prontos** que cada um substitui uma categoria de ferramenta cara que sua empresa provavelmente paga todo mes. Implementa hoje, economiza esse mes.
+> Este pacote nao e teoria. Sao **5 prompts cirurgicos**, **uma calculadora de ROI** que diz se vale migrar antes de voce mexer, **um checklist de migracao** pra nao perder dado/cliente no caminho, e **scripts/configs prontos** dentro de cada prompt.
 
-## O que tem aqui
+## A premissa
 
-| # | Prompt | Substitui | Economia tipica/mes |
-|---|---|---|---|
-| 00 | LEIA-PRIMEIRO | — | — |
-| 01 | COPYWRITING | Jasper, Copy.ai, Writesonic, Rytr | R$ 200–500 |
-| 02 | AUTOMACAO | Make, Zapier, n8n cloud | R$ 150–800 |
-| 03 | ANALISE-DE-DADOS | Power BI, Looker Studio Pro, BI consultor | R$ 300–2.000 |
-| 04 | ATENDIMENTO | Manychat, Chatbot.com, scripts em SaaS | R$ 200–700 |
-| 05 | DOCUMENTOS | PandaDoc, DocuSign templates, Notion AI | R$ 150–600 |
+Voce paga ferramenta SaaS porque elas resolvem problema. **Boa parte delas sao wrappers de IA + alguma interface**. Quando o Claude Code resolve o mesmo problema, a ferramenta vira custo puro.
 
-Total potencial: **R$ 1.000 a R$ 4.600 por mes** ja no proximo cartao.
+Esse pacote ensina a fazer essa troca **com seguranca**: sem perder dado, sem quebrar operacao, sem cancelar antes de ter substituto rodando.
 
-## Como usar
+## Faixa de economia tipica
 
-1. Abra o arquivo do prompt que voce quer (ex: `01-COPYWRITING.md`)
-2. Copie o bloco entre `--- COMECO DO PROMPT ---` e `--- FIM DO PROMPT ---`
-3. Cole no Claude Code (ou Claude.ai)
-4. Substitua os trechos `{ENTRE CHAVES}` pelo seu contexto
-5. Pronto. A saida ja sai utilizavel.
+Olhamos 30 PMEs reais (faturamento R$ 100k-2M/ano). Stack tipica de SaaS pago no segmento:
 
-## Regras de bolso
+| Categoria | Tipo de ferramenta | Faixa mensal |
+|---|---|---|
+| Copywriting | Jasper, Copy.ai, Writesonic | R$ 200-500 |
+| Automacao | Zapier, Make, n8n cloud | R$ 150-800 |
+| BI/Dados | Power BI Pro, Looker Studio Pro | R$ 300-2.000 |
+| Atendimento | Manychat, Chatbot.com, Botconversa | R$ 200-700 |
+| Documentos | PandaDoc, DocuSign, Notion AI | R$ 150-600 |
 
-- Antes de cancelar a ferramenta atual, rode o prompt em paralelo por 1 semana
-- Mede o tempo que voce gasta no Claude vs. o tempo que gastava antes
-- Se o resultado for 80% do que era + custo zero, troque
-- Se for 100% do que era, troque correndo
+**Total tipico:** R$ 1.000 a R$ 4.600/mes. Anual: **R$ 12k a R$ 55k**.
+
+Substituindo por Claude (assinatura Pro R$ 100/mes ou API conforme uso, ~R$ 50-200/mes pra PME):
+**economia liquida tipica: R$ 800 a R$ 4.300/mes** = **R$ 9.600 a R$ 51.600/ano**.
+
+> Antes de cancelar nada, leia `00-LEIA-PRIMEIRO.md` e rode `CALCULADORA-ROI.md` pro seu caso.
+
+## Conteudo
+
+| # | Arquivo | Conteudo |
+|---|---|---|
+| 00 | LEIA-PRIMEIRO | Mentalidade, ordem, o que funciona e o que nao |
+| 01 | COPYWRITING | Substitui Jasper/Copy.ai (com prompt de marca + biblioteca) |
+| 02 | AUTOMACAO | Substitui Zapier/Make (com codigo Node + agendamento cron) |
+| 03 | ANALISE-DE-DADOS | Substitui BI (com prompt de analista + exemplos por setor) |
+| 04 | ATENDIMENTO | Substitui Manychat/Chatbot (com base de conhecimento + integracao) |
+| 05 | DOCUMENTOS | Substitui PandaDoc/DocuSign (com 8 tipos de documento + assinatura) |
+| C1 | CALCULADORA-ROI | Diz em 5 minutos se vale migrar pro seu caso |
+| C2 | CHECKLIST-MIGRACAO | 12 passos pra trocar sem perder dado/cliente |
+
+## Ordem recomendada
+
+1. `00-LEIA-PRIMEIRO.md` — premissa e quando NAO substituir
+2. `CALCULADORA-ROI.md` — voce sabe se vale antes de mexer
+3. `CHECKLIST-MIGRACAO.md` — como migrar cada categoria
+4. Os 5 prompts em ordem (01 a 05) ou pulando direto pra categoria de maior gasto
+
+## Onde rodar cada prompt
+
+| Prompt | Onde | Por que |
+|---|---|---|
+| 01 — Copy | Claude.ai (web) ou Code | Caso a caso, web e mais rapido |
+| 02 — Automacao | Claude Code (CLI) | Vai criar arquivo + agendar cron |
+| 03 — Dados | Claude Code (CLI) | Roda na pasta com os CSVs |
+| 04 — Atendimento | Claude Code pra base + API pra responder | Volume justifica integracao |
+| 05 — Documentos | Claude.ai ou Code | Caso a caso |
 
 ---
 
