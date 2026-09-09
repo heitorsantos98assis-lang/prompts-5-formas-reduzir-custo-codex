@@ -6,7 +6,7 @@
 
 Boa parte dos "bots" que voce paga sao **arvores de decisao com 8 mensagens**. Voce paga R$ 100-700/mes pelo construtor visual + integracao com WhatsApp/Instagram.
 
-Claude responde melhor com **1 prompt + base de conhecimento da sua empresa em arquivo `.md`**. Mais rapido pra construir, mais flexivel, mais natural pro cliente.
+Codex responde melhor com **1 prompt + base de conhecimento da sua empresa em arquivo `.md`**. Mais rapido pra construir, mais flexivel, mais natural pro cliente.
 
 ## Comparativo de custo (Brasil, 2026)
 
@@ -18,9 +18,9 @@ Claude responde melhor com **1 prompt + base de conhecimento da sua empresa em a
 | Botconversa | Pro | R$ 297/mes | ilimitado |
 | Take Blip | varia | R$ 500-3.000/mes | varia |
 
-vs. **Claude Pro (R$ 110/mes) + integracao via API** (custo por uso, ~R$ 0,005-0,02 por resposta):
+vs. **Codex Pro (R$ 110/mes) + integracao via API** (custo por uso, ~R$ 0,005-0,02 por resposta):
 
-| Volume | Custo total Claude estimado |
+| Volume | Custo total Codex estimado |
 |---|---|
 | 100 atendimentos/mes | R$ 110 (Pro suficiente) |
 | 1.000 atendimentos/mes | R$ 130 (Pro + ~R$ 20 API) |
@@ -35,7 +35,7 @@ Pra volume baixo/medio, economia de **R$ 100-2.500/mes**.
 |---|---|
 | < 500 atendimentos/mes | Substitui de boa, manual ou semi-automatico |
 | 500-3.000/mes | Substitui com integracao API + webhook (vale o esforco) |
-| 3.000-10.000/mes | Avalia: Claude funciona, mas operacao 24/7 vira ponto |
+| 3.000-10.000/mes | Avalia: Codex funciona, mas operacao 24/7 vira ponto |
 | 10.000+/mes | Provavel manter ferramenta especializada |
 
 ## A logica deste prompt
@@ -43,19 +43,19 @@ Pra volume baixo/medio, economia de **R$ 100-2.500/mes**.
 3 partes:
 
 ### Parte A — Construir base de conhecimento (`base.md`)
-Roda 1 vez. O Claude te entrevista. Saida: arquivo com tudo que o atendimento precisa saber.
+Roda 1 vez. O Codex te entrevista. Saida: arquivo com tudo que o atendimento precisa saber.
 
 ### Parte B — Modo manual (sem integracao)
 Voce copia mensagem, cola junto da base, recebe resposta, copia pro WhatsApp.
 
 ### Parte C — Modo automatico (com integracao)
-Webhook do WhatsApp Business / Z-API conectado ao Claude API. Resposta automatica com escalacao humana quando necessario.
+Webhook do WhatsApp Business / Z-API conectado ao Codex API. Resposta automatica com escalacao humana quando necessario.
 
 ---
 
 ## Parte A — Construir base de conhecimento
 
-Esse e o passo mais importante. **Sem `base.md` boa, qualquer atendimento e ruim** (humano ou Claude).
+Esse e o passo mais importante. **Sem `base.md` boa, qualquer atendimento e ruim** (humano ou Codex).
 
 --- COMECO PROMPT A ---
 
@@ -192,7 +192,7 @@ So a resposta a ser enviada ao cliente. Se for `[ESCALAR]`, comece a resposta co
 ```
 1. Mensagem chega no WhatsApp/Instagram
 2. Voce copia a mensagem
-3. Cola no Claude.ai junto do prompt B
+3. Cola no Codex.ai junto do prompt B
 4. Confere a resposta gerada (10-20 segundos)
 5. Se OK, copia e cola no WhatsApp/Instagram
 6. Se [ESCALAR], avisa o time e passa o atendimento
@@ -209,20 +209,20 @@ Apos volume passar de ~30 atendimentos/dia, vale automatizar com webhook.
 ### Stack tipica
 
 - **WhatsApp**: Z-API (R$ 199/mes, instancia ilimitada) ou WhatsApp Cloud API (Meta — gratis ate 1k conversas/mes)
-- **Webhook**: servidor Node/Python que recebe mensagem e chama Claude
-- **Claude**: API direta com prompt B
+- **Webhook**: servidor Node/Python que recebe mensagem e chama Codex
+- **Codex**: API direta com prompt B
 
 ### Codigo starter (Node.js)
 
 --- COMECO PROMPT C ---
 
-Voce e um engenheiro fullstack. Sua missao: criar a integracao WhatsApp + Claude pra atender clientes automaticamente, com escalacao humana quando necessario.
+Voce e um engenheiro fullstack. Sua missao: criar a integracao WhatsApp + Codex pra atender clientes automaticamente, com escalacao humana quando necessario.
 
 # Stack
 
 - WhatsApp via: {Z-API / WhatsApp Cloud API / outro}
 - Backend: Node.js + Express (ou Python + FastAPI — escolha o que faz mais sentido)
-- LLM: Claude API (modelo Sonnet, e o ideal pra esse caso)
+- LLM: Codex API (modelo Sonnet, e o ideal pra esse caso)
 - Hospedagem: {VPS / Vercel Functions / Railway}
 
 # Comportamento esperado
@@ -235,12 +235,12 @@ Voce e um engenheiro fullstack. Sua missao: criar a integracao WhatsApp + Claude
       - Sistema: o conteudo de `base.md`
       - Historico: ultimas mensagens
       - Atual: a mensagem nova do cliente
-   c. Chama Claude API
+   c. Chama Codex API
    d. Se a resposta comeca com `[ESCALAR]`:
       - Manda mensagem no Slack/grupo do time alertando + cole o atendimento
       - Manda mensagem no WhatsApp do cliente avisando que humano vai chamar
       - Marca thread como "humano"
-   e. Caso contrario, manda a resposta do Claude pro cliente via Z-API/Meta
+   e. Caso contrario, manda a resposta do Codex pro cliente via Z-API/Meta
 4. Salva interacao em banco (Postgres simples ou ate SQLite)
 
 # Variaveis sensiveis (em .env)
@@ -248,7 +248,7 @@ Voce e um engenheiro fullstack. Sua missao: criar a integracao WhatsApp + Claude
 ```
 ZAPI_TOKEN=
 ZAPI_INSTANCE=
-ANTHROPIC_API_KEY=
+OPENAI_API_KEY=
 SLACK_WEBHOOK_URL=
 DATABASE_URL=
 ```
@@ -259,7 +259,7 @@ DATABASE_URL=
 atendimento-bot/
 ├── src/
 │   ├── index.{js|py}              # servidor + webhook
-│   ├── claude.{js|py}             # chamadas Claude API
+│   ├── Codex.{js|py}             # chamadas Codex API
 │   ├── whatsapp.{js|py}           # Z-API / Meta integration
 │   ├── db.{js|py}                 # historico de conversas
 │   └── base.md                    # base de conhecimento
@@ -269,13 +269,13 @@ atendimento-bot/
 └── docker-compose.yml (opcional)
 ```
 
-# Codigo da chamada ao Claude (referencia)
+# Codigo da chamada ao Codex (referencia)
 
 ```javascript
-import Anthropic from '@anthropic-ai/sdk'
+import OpenAI from 'openai'
 import fs from 'fs'
 
-const client = new Anthropic()
+const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 const baseConhecimento = fs.readFileSync('./src/base.md', 'utf-8')
 
 export async function gerarResposta({ historico, mensagemAtual }) {
@@ -284,10 +284,10 @@ export async function gerarResposta({ historico, mensagemAtual }) {
     { role: 'user', content: mensagemAtual }
   ]
 
-  const response = await client.messages.create({
-    model: 'claude-sonnet-4-6',
-    max_tokens: 600,
-    system: `Voce e o atendente. Sua base de conhecimento abaixo:
+  const response = await client.responses.create({
+    model: 'gpt-5.3-codex',
+    max_output_tokens: 600,
+    instructions: `Voce e o atendente. Sua base de conhecimento abaixo:
 
 ${baseConhecimento}
 
@@ -296,10 +296,10 @@ Regras:
 - Maximo 4 linhas
 - Se nao souber, comece resposta com [ESCALAR]
 - Cancelamento/reembolso/reclamacao: [ESCALAR] sempre`,
-    messages
+    input: messages
   })
 
-  return response.content[0].text
+  return response.output_text
 }
 ```
 
@@ -307,7 +307,7 @@ Regras:
 
 1. Codigo completo dos arquivos acima, funcional
 2. README com:
-   - Como conseguir tokens (Z-API e Anthropic)
+   - Como configurar as credenciais (Z-API e OpenAI)
    - Como configurar webhook no Z-API/Meta
    - Como testar local com `ngrok`
    - Como deployar (Vercel/Railway/VPS)
@@ -329,17 +329,17 @@ Faca o trabalho completo. Avise no final o que eu preciso fazer manualmente (cri
 **Migracao:**
 1. Marcelo rodou Parte A — gerou `base.md` em 45 minutos (entrevista guiada)
 2. Tentou Parte B (manual) por 2 semanas — gostou
-3. Volume justificou Parte C — contratou Z-API (R$ 199/mes), montou webhook + Claude (mais 1 dia de trabalho)
+3. Volume justificou Parte C — contratou Z-API (R$ 199/mes), montou webhook + Codex (mais 1 dia de trabalho)
 
 **Depois:**
 - Z-API: R$ 199/mes
-- Claude API: ~R$ 80/mes (~600 mensagens, custo medio R$ 0,01-0,05 por mensagem)
+- Codex API: ~R$ 80/mes (~600 mensagens, custo medio R$ 0,01-0,05 por mensagem)
 - Total: R$ 280/mes
 
 **Mas:**
 - Manychat era R$ 195
 - E agora ele tem **CRM de cliente** (banco de historico que era separado), economia de R$ 60/mes do CRM antigo
-- Resposta passou a ser de qualidade muito superior (Claude entende contexto)
+- Resposta passou a ser de qualidade muito superior (Codex entende contexto)
 - Escalacao humana e mais inteligente (so escala quando faz sentido)
 
 **Economia liquida:** ~R$ -25/mes (gastou um pouquinho mais), **mas qualidade de atendimento subiu drasticamente** + ele ganhou flexibilidade de mexer no comportamento sem mexer em construtor visual.
@@ -359,11 +359,11 @@ Faca o trabalho completo. Avise no final o que eu preciso fazer manualmente (cri
 
 ## Erros comuns
 
-1. **`base.md` ralo** — atendimento ruim, mesmo com Claude
-2. **Esquecer de atualizar a base** quando muda preco/politica — Claude responde errado
+1. **`base.md` ralo** — atendimento ruim, mesmo com Codex
+2. **Esquecer de atualizar a base** quando muda preco/politica — Codex responde errado
 3. **Nao testar com 20+ casos antes de ligar webhook** — sai gera situacao chata
-4. **Webhook sem fallback humano** — quando Claude nao sabe, cliente nao recebe nada
-5. **Nao salvar historico** — Claude perde contexto a cada mensagem, conversa fica robotica
+4. **Webhook sem fallback humano** — quando Codex nao sabe, cliente nao recebe nada
+5. **Nao salvar historico** — Codex perde contexto a cada mensagem, conversa fica robotica
 
 ## Checklist de qualidade
 

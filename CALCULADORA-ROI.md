@@ -27,21 +27,21 @@ Tempo medio por operacao: _______ min
 Tempo total/mes: _______ horas
 ```
 
-## Passo 3 — Custo do Claude (estimado pro seu volume)
+## Passo 3 — Custo do Codex (estimado pro seu volume)
 
 ### Categoria 01 — Copywriting
-- ate 100 textos/mes: Claude Pro (R$ 110/mes)
-- 100-500: Claude Pro + uso eventual API (R$ 150/mes)
-- 500-2000: Claude Pro + API moderada (R$ 250/mes)
+- ate 100 textos/mes: Codex Pro (R$ 110/mes)
+- 100-500: Codex Pro + uso eventual API (R$ 150/mes)
+- 500-2000: Codex Pro + API moderada (R$ 250/mes)
 - 2000+: API direta (R$ 400+/mes)
 
 ### Categoria 02 — Automacao
-- ate 1000 execucoes/mes simples: Claude Pro + cron local (R$ 110/mes)
-- 1000-10000: Claude Code + scripts otimizados (R$ 150/mes)
+- ate 1000 execucoes/mes simples: Codex Pro + cron local (R$ 110/mes)
+- 1000-10000: Codex + scripts otimizados (R$ 150/mes)
 - 10000+: API com batching (R$ 300+/mes)
 
 ### Categoria 03 — Analise de dados
-- consultas eventuais: Claude Pro (R$ 110/mes)
+- consultas eventuais: Codex Pro (R$ 110/mes)
 - dashboards diarios automatizados: Pro + scripts (R$ 150/mes)
 
 ### Categoria 04 — Atendimento
@@ -50,17 +50,17 @@ Tempo total/mes: _______ horas
 - 3000+: depende — pode nao ser viavel migrar 100%
 
 ### Categoria 05 — Documentos
-- ate 50 documentos/mes: Claude Pro (R$ 110/mes)
+- ate 50 documentos/mes: Codex Pro (R$ 110/mes)
 - 50-200: Pro + scripts (R$ 130/mes)
 - 200+: API + template (R$ 200/mes)
 
 ## Passo 4 — Calcule
 
 ```
-Economia mensal = custo atual ferramenta - custo Claude estimado
+Economia mensal = custo atual ferramenta - custo Codex estimado
 
-Se voce nao usa Claude pra mais nada hoje, considere o custo total dele.
-Se voce ja paga Claude Pro pra outras coisas, o custo marginal e o adicional de uso (uso da API).
+Se voce nao usa Codex pra mais nada hoje, considere o custo total dele.
+Se voce ja paga Codex Pro pra outras coisas, o custo marginal e o adicional de uso (uso da API).
 ```
 
 **Exemplo real (loja Camisa BR):**
@@ -73,7 +73,7 @@ Antes:
 - Manychat (atendimento): R$ 95/mes
 - TOTAL: R$ 595/mes = R$ 7.140/ano
 
-Depois (Claude Pro + uso ocasional API):
+Depois (Codex Pro + uso ocasional API):
 - R$ 180/mes total = R$ 2.160/ano
 
 Economia liquida: R$ 415/mes = R$ 4.980/ano
@@ -88,8 +88,8 @@ Economia liquida mensal **>= R$ 200**.
 
 Se for menos, o tempo que voce gasta migrando + manutencao nao paga. Mantenha a ferramenta.
 
-### Criterio 2 — Volume cabe no Claude
-Cheque a tabela do Passo 3 — voce esta dentro do volume que o Claude resolve sem dor?
+### Criterio 2 — Volume cabe no Codex
+Cheque a tabela do Passo 3 — voce esta dentro do volume que o Codex resolve sem dor?
 
 Sim → segue.
 Nao (volume gigante) → fica com SaaS especializado.
@@ -112,7 +112,7 @@ Se voce esta em pico de operacao (campanha, lancamento, fim de ano), espera. Mig
 Marca os criterios:
 
 - [ ] Economia >= R$ 200/mes
-- [ ] Volume cabe no Claude
+- [ ] Volume cabe no Codex
 - [ ] Eu ou alguem mantem
 - [ ] Operacao tolera transicao
 

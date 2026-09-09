@@ -6,9 +6,9 @@
 
 Em PME, o problema com BI nao e fazer o dashboard. E **abrir o dashboard**. Depois que o consultor entrega, o painel piscante vira museu. Ninguem abre, ninguem questiona, ninguem cruza dado novo.
 
-O Claude e melhor pra como **PME realmente usa dado**: voce **conversa**. "Qual o ticket medio dos clientes que vieram de indicacao no ultimo trimestre?" Resposta em 30 segundos.
+O Codex e melhor pra como **PME realmente usa dado**: voce **conversa**. "Qual o ticket medio dos clientes que vieram de indicacao no ultimo trimestre?" Resposta em 30 segundos.
 
-Voce ainda pode ter dashboard automatico (se quiser), mas a parte que importa — **fazer pergunta nova e ter resposta certa rapido** — o Claude entrega 100x mais rapido.
+Voce ainda pode ter dashboard automatico (se quiser), mas a parte que importa — **fazer pergunta nova e ter resposta certa rapido** — o Codex entrega 100x mais rapido.
 
 ## Comparativo de custo (Brasil, 2026)
 
@@ -21,7 +21,7 @@ Voce ainda pode ter dashboard automatico (se quiser), mas a parte que importa �
 | Metabase Cloud | Starter | US$ 85/mes (~R$ 470) | R$ 5.640 |
 | Consultor de BI freelancer | dashboard custom | R$ 3-15k por projeto + manutencao | varia |
 
-vs. **Claude Pro (R$ 110/mes)**: o "analista" trabalha 24/7, atende todas as duvidas que voce tem agora ou que terá depois.
+vs. **Codex Pro (R$ 110/mes)**: o "analista" trabalha 24/7, atende todas as duvidas que voce tem agora ou que terá depois.
 
 Economia media PME: R$ 100-2.000/mes = **R$ 1.200-24.000/ano** (sem contar consultor).
 
@@ -29,20 +29,20 @@ Economia media PME: R$ 100-2.000/mes = **R$ 1.200-24.000/ano** (sem contar consu
 
 | Volume | Solucao |
 |---|---|
-| < 1 milhao de linhas | Claude le CSV/SQLite direto, sem dor |
-| 1-10 milhoes | Claude com SQLite local (consulta SQL gerada por ele) |
-| 10-100 milhoes | Claude + DuckDB (gratis) — performa bem |
-| 100M+ | Claude conectado a Postgres/BigQuery via prompt SQL |
+| < 1 milhao de linhas | Codex le CSV/SQLite direto, sem dor |
+| 1-10 milhoes | Codex com SQLite local (consulta SQL gerada por ele) |
+| 10-100 milhoes | Codex + DuckDB (gratis) — performa bem |
+| 100M+ | Codex conectado a Postgres/BigQuery via prompt SQL |
 
 ## A logica deste prompt
 
 Sao **3 modos de uso**:
 
 ### Modo 1 — Analise pontual
-Claude.ai (web), upload do CSV. Pergunta e responde. Bom pra "preciso saber X agora".
+Codex.ai (web), upload do CSV. Pergunta e responde. Bom pra "preciso saber X agora".
 
 ### Modo 2 — Analise recorrente
-Claude Code na pasta com os dados. Claude vira seu analista permanente. Voce versiona perguntas e respostas em arquivos `.md`.
+Codex na pasta com os dados. Codex vira seu analista permanente. Voce versiona perguntas e respostas em arquivos `.md`.
 
 ### Modo 3 — Dashboard automatico
 Script que roda diaria/semanalmente, gera PDF/markdown e manda pro time. Substitui o dashboard piscante do Power BI.
@@ -233,7 +233,7 @@ Marcelo, sabado de manha, querendo decidir se entra ou nao numa campanha de afil
 > [cola CSV de vendas + CONTEXTO.md]
 > Pergunta: dos clientes que vieram de afiliados nos ultimos 6 meses, quantos compraram mais de 1 vez? Qual o LTV deles vs. clientes vindos de Instagram?
 
-Claude responde em 30 segundos:
+Codex responde em 30 segundos:
 
 ```
 Resposta direta:
@@ -311,6 +311,6 @@ Marcelo configurou um dashboard semanal que roda toda segunda 8h e cai no email 
 |---|---|
 | 10+ pessoas precisam acessar dashboard com filtro proprio | Mantem Power BI/Looker (UI multi-user) |
 | Auditoria SOX/ITGC exige fornecedor certificado | Mantem ferramenta enterprise |
-| Volume gigante (50M+ linhas, query frequente) com latencia baixa | Avalia BigQuery/Snowflake — Claude vira camada de pergunta |
+| Volume gigante (50M+ linhas, query frequente) com latencia baixa | Avalia BigQuery/Snowflake — Codex vira camada de pergunta |
 
 Pra 90% das PMEs, o trio **Modo 1 + Modo 2 + Modo 3 substitui completamente Power BI Pro** com ganho de velocidade e flexibilidade.

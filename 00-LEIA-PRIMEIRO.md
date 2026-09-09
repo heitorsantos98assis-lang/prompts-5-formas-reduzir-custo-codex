@@ -1,6 +1,6 @@
 # 00 — Leia primeiro
 
-Esses 5 prompts cortam custo onde o Claude entrega o mesmo valor de uma ferramenta SaaS.
+Esses 5 prompts cortam custo onde o Codex entrega o mesmo valor de uma ferramenta SaaS.
 
 ## A logica honesta
 
@@ -11,7 +11,7 @@ Voce nao paga ferramenta SaaS pelo software. Paga por:
 3. **Compliance** (SOC 2, contrato com SLA, certificacoes)
 4. **Conveniencia** (botao na hora, app mobile, time de suporte)
 
-O Claude entrega **(1)** com facilidade. Nao entrega (2), (3) ou (4).
+O Codex entrega **(1)** com facilidade. Nao entrega (2), (3) ou (4).
 
 Pergunta de migracao: **voce paga aquela ferramenta principalmente pelo (1) ou pelos outros?**
 
@@ -24,7 +24,7 @@ Pergunta de migracao: **voce paga aquela ferramenta principalmente pelo (1) ou p
 
 - Empresa com 1-30 pessoas
 - Volume baixo a medio (centenas a alguns milhares de operacoes/mes)
-- Pelo menos 1 pessoa do time confortavel com Claude / minimamente tecnica
+- Pelo menos 1 pessoa do time confortavel com Codex / minimamente tecnica
 - Nicho B2B/B2C sem regulacao pesada
 - Operacao tolera 30s-2min de "delay" em cenarios assincronos
 
@@ -47,7 +47,7 @@ Honestidade: **das 5 categorias deste pacote**, em 80%+ das PMEs uma migracao pa
 Roda `CALCULADORA-ROI.md` pra cada ferramenta paga. So migra a que:
 
 - Economia mensal > R$ 200
-- Volume cabe no Claude (definido por categoria)
+- Volume cabe no Codex (definido por categoria)
 - Voce tem 4-8h pra montar a substituicao + 1 semana de teste paralelo
 
 Sem isso, e tempo gasto pra economizar troco.
@@ -66,13 +66,13 @@ Sequencia que funciona:
 
 ### Passo 3 — Versionar tudo
 
-Tudo o que voce monta com Claude (prompts, base de conhecimento, scripts) **vai pra Git**. Razao: voce vai melhorar com o tempo, e ter historia importa. Se em 3 meses a saida piorou, voce volta pra versao anterior.
+Tudo o que voce monta com Codex (prompts, base de conhecimento, scripts) **vai pra Git**. Razao: voce vai melhorar com o tempo, e ter historia importa. Se em 3 meses a saida piorou, voce volta pra versao anterior.
 
 ## Ordem sugerida pelas 5 categorias
 
 Por retorno tipico esperado (impacto x esforco):
 
-1. **02 — AUTOMACAO** (Zapier/Make sai caro com volume, Claude resolve maioria com cron)
+1. **02 — AUTOMACAO** (Zapier/Make sai caro com volume, Codex resolve maioria com cron)
 2. **03 — ANALISE DE DADOS** (BI subutilizado em PME — quase ninguem abre o dashboard)
 3. **01 — COPYWRITING** (alta frequencia = ROI rapido)
 4. **04 — ATENDIMENTO** (depende muito do volume — calcula antes)
@@ -80,14 +80,14 @@ Por retorno tipico esperado (impacto x esforco):
 
 Voce pode pular a ordem se sua categoria de maior gasto for outra.
 
-## Custos reais do Claude (referencia 2026)
+## Custos reais do Codex (referencia 2026)
 
-- **Claude Pro (web)**: US$ 20/mes (~R$ 110)
+- **Codex Pro (web)**: US$ 20/mes (~R$ 110)
   - Suficiente pra 80% dos casos de uso de PME
   - Sem API, sem programacao
   - Volume: alto, mas com limite por sessao
 
-- **Claude Code (CLI)**: usa creditos da sua conta Pro (cabe na assinatura) ou paga por uso da API
+- **Codex (CLI)**: usa creditos da sua conta Pro (cabe na assinatura) ou paga por uso da API
   - Quando: quando voce vai criar arquivos, integrar, automatizar
   - Custo tipico PME: R$ 50-300/mes adicional
 

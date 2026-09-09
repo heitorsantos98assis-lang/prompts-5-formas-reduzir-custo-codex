@@ -1,4 +1,4 @@
-# 5 Formas de Reduzir Custo com Claude Code
+# 5 Formas de Reduzir Custo com Codex
 
 5 aplicacoes especificas pra cortar gastos em ferramentas SaaS. Implementa hoje, economiza esse mes.
 
@@ -6,7 +6,7 @@
 
 ## A premissa
 
-Voce paga ferramenta SaaS porque elas resolvem problema. **Boa parte delas sao wrappers de IA + alguma interface**. Quando o Claude Code resolve o mesmo problema, a ferramenta vira custo puro.
+Voce paga ferramenta SaaS porque elas resolvem problema. **Boa parte delas sao wrappers de IA + alguma interface**. Quando o Codex resolve o mesmo problema, a ferramenta vira custo puro.
 
 Esse pacote ensina a fazer essa troca **com seguranca**: sem perder dado, sem quebrar operacao, sem cancelar antes de ter substituto rodando.
 
@@ -24,7 +24,7 @@ Olhamos 30 PMEs reais (faturamento R$ 100k-2M/ano). Stack tipica de SaaS pago no
 
 **Total tipico:** R$ 1.000 a R$ 4.600/mes. Anual: **R$ 12k a R$ 55k**.
 
-Substituindo por Claude (assinatura Pro R$ 100/mes ou API conforme uso, ~R$ 50-200/mes pra PME):
+Substituindo por Codex (assinatura Pro R$ 100/mes ou API conforme uso, ~R$ 50-200/mes pra PME):
 **economia liquida tipica: R$ 800 a R$ 4.300/mes** = **R$ 9.600 a R$ 51.600/ano**.
 
 > Antes de cancelar nada, leia `00-LEIA-PRIMEIRO.md` e rode `CALCULADORA-ROI.md` pro seu caso.
@@ -53,11 +53,11 @@ Substituindo por Claude (assinatura Pro R$ 100/mes ou API conforme uso, ~R$ 50-2
 
 | Prompt | Onde | Por que |
 |---|---|---|
-| 01 — Copy | Claude.ai (web) ou Code | Caso a caso, web e mais rapido |
-| 02 — Automacao | Claude Code (CLI) | Vai criar arquivo + agendar cron |
-| 03 — Dados | Claude Code (CLI) | Roda na pasta com os CSVs |
-| 04 — Atendimento | Claude Code pra base + API pra responder | Volume justifica integracao |
-| 05 — Documentos | Claude.ai ou Code | Caso a caso |
+| 01 — Copy | Codex.ai (web) ou Code | Caso a caso, web e mais rapido |
+| 02 — Automacao | Codex (CLI) | Vai criar arquivo + agendar cron |
+| 03 — Dados | Codex (CLI) | Roda na pasta com os CSVs |
+| 04 — Atendimento | Codex pra base + API pra responder | Volume justifica integracao |
+| 05 — Documentos | Codex.ai ou Code | Caso a caso |
 
 ---
 

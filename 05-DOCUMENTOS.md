@@ -4,7 +4,7 @@
 
 ## Por que substituir
 
-Voce paga por **template parametrizavel + assinatura eletronica**. O Claude monta documento perfeito em 1 prompt. A assinatura voce faz com **gov.br (gratis no Brasil) ou Adobe Acrobat Reader (gratis)**.
+Voce paga por **template parametrizavel + assinatura eletronica**. O Codex monta documento perfeito em 1 prompt. A assinatura voce faz com **gov.br (gratis no Brasil) ou Adobe Acrobat Reader (gratis)**.
 
 ## Comparativo de custo (Brasil, 2026)
 
@@ -17,7 +17,7 @@ Voce paga por **template parametrizavel + assinatura eletronica**. O Claude mont
 | Notion AI | add-on | US$ 10 (~R$ 55) | R$ 660 |
 | Adobe Acrobat Pro | Pro | R$ 90/mes | R$ 1.080 |
 
-vs. **Claude Pro (R$ 110/mes)** para gerar + **gov.br (gratis)** para assinar = ~R$ 110/mes.
+vs. **Codex Pro (R$ 110/mes)** para gerar + **gov.br (gratis)** para assinar = ~R$ 110/mes.
 
 Economia tipica: R$ 50-200/mes por seat = **R$ 600-2.400/ano**.
 
@@ -25,8 +25,8 @@ Economia tipica: R$ 50-200/mes por seat = **R$ 600-2.400/ano**.
 
 | Volume | Solucao |
 |---|---|
-| Ate 50 documentos/mes | Claude Pro web — manual |
-| 50-200/mes | Claude Pro + scripts (gera + ja salva PDF) |
+| Ate 50 documentos/mes | Codex Pro web — manual |
+| 50-200/mes | Codex Pro + scripts (gera + ja salva PDF) |
 | 200+/mes | API + template em codigo |
 
 ## Tipos de documento que esse pacote cobre
@@ -333,7 +333,7 @@ Assinatura: gov.br pra contratos grandes, WhatsApp confirmado pra propostas pequ
 
 1. **Confiar 100% no documento gerado** — sempre da uma lida. Em valores > R$ 10k, advogado ve
 2. **Esquecer foro** — clausula chata mas necessaria
-3. **Numero por extenso errado** — Claude erra as vezes. Confere
+3. **Numero por extenso errado** — Codex erra as vezes. Confere
 4. **Falta de aviso de IA no rodape** — pratica boa pra transparencia
 5. **Salvar PDF antes de revisar** — ainda tem pra editar; salve so a versao final
 

@@ -1,6 +1,6 @@
 # Checklist de Migracao — 12 passos
 
-Independente da categoria, segue esses 12 passos pra trocar SaaS por Claude **sem perder dado, sem perder cliente, sem operacao quebrada**.
+Independente da categoria, segue esses 12 passos pra trocar SaaS por Codex **sem perder dado, sem perder cliente, sem operacao quebrada**.
 
 ---
 
@@ -89,13 +89,13 @@ Por 7 dias:
 
 Tabela simples em planilha (sim, ironicamente):
 
-| Caso | Saida ferramenta antiga | Saida Claude | Tempo antiga | Tempo Claude | Vencedor |
+| Caso | Saida ferramenta antiga | Saida Codex | Tempo antiga | Tempo Codex | Vencedor |
 
-Apos 7 dias, voce tem 5-15 casos comparaveis. Se o Claude vence em **80%+** com qualidade aceitavel, segue.
+Apos 7 dias, voce tem 5-15 casos comparaveis. Se o Codex vence em **80%+** com qualidade aceitavel, segue.
 
 ### 9. Treina quem mais usa
 
-Se outra pessoa do time usa a ferramenta antiga, mostra como usar o Claude pra mesma demanda. **Ate aqui, ainda em paralelo.**
+Se outra pessoa do time usa a ferramenta antiga, mostra como usar o Codex pra mesma demanda. **Ate aqui, ainda em paralelo.**
 
 - [ ] 1 sessao de 30min explicando
 - [ ] Documenta em `docs/como-usar.md` os passos do dia a dia
@@ -129,7 +129,7 @@ Toda SaaS tem **ciclo de cobranca**. Cancele:
 `docs/migracao-{categoria}.md`:
 
 ```
-# Migracao {Ferramenta} → Claude
+# Migracao {Ferramenta} → Codex
 
 Data inicio:        2026-XX-XX
 Data cancelamento:  2026-XX-XX
@@ -144,7 +144,7 @@ Quem manteim:       {nome}
 {ferramentas que NAO migraram nessa categoria, se houver}
 
 ## Risco identificado
-{ex: se o Claude API der down, plano B e ...}
+{ex: se o Codex API der down, plano B e ...}
 
 ## Como reverter (caso precise)
 1. Reativar conta {Ferramenta} (link)
@@ -161,7 +161,7 @@ Esse arquivo e ouro se daqui a 6 meses voce precisar reverter ou justificar.
 | Sintoma | Acao |
 |---|---|
 | Time reclama que e "mais demorado" | Re-treina + automatiza partes repetitivas |
-| Output do Claude parece pior que da ferramenta | Reaprimora prompt; talvez seja caso de manter SaaS |
+| Output do Codex parece pior que da ferramenta | Reaprimora prompt; talvez seja caso de manter SaaS |
 | Cliente reclama de qualidade ou demora | Reverte ja, depois investiga |
 | Voce gasta mais tempo mantendo prompt do que ganha | Talvez nao valia migrar mesmo |
 

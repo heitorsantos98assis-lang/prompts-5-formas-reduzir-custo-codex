@@ -6,7 +6,7 @@
 
 Boa parte das automacoes do Zapier/Make sao **scripts de 30-100 linhas com dois ifs**. Voce paga R$ 100-800/mes pela interface visual + escala de execucoes.
 
-Com Claude Code voce escreve o script em 10 minutos, agenda no cron do seu Mac/servidor, e nunca mais paga.
+Com Codex voce escreve o script em 10 minutos, agenda no cron do seu Mac/servidor, e nunca mais paga.
 
 ## Comparativo de custo (Brasil, 2026)
 
@@ -19,7 +19,7 @@ Com Claude Code voce escreve o script em 10 minutos, agenda no cron do seu Mac/s
 | Make | Pro | US$ 16 (~R$ 88) | 10.000 + recursos |
 | n8n cloud | Starter | US$ 20 (~R$ 110) | 5.000 execucoes |
 
-vs. **Claude Pro (R$ 110/mes)**: ja inclui Claude Code. O custo marginal de cada execucao e zero (roda no seu Mac/servidor) ou centavos (se via API).
+vs. **Codex Pro (R$ 110/mes)**: ja inclui Codex. O custo marginal de cada execucao e zero (roda no seu Mac/servidor) ou centavos (se via API).
 
 Economia tipica: R$ 100-700/mes = **R$ 1.200-8.400/ano**.
 
@@ -167,7 +167,7 @@ Faca o trabalho completo. Crie os arquivos. No final, me liste:
 
 ### Mac/Linux com cron
 
-Apos o Claude gerar o script, voce agenda no cron:
+Apos o Codex gerar o script, voce agenda no cron:
 
 ```bash
 crontab -e
@@ -306,7 +306,7 @@ Volume: ~600 tasks/mes. Plano Zapier Pro: **R$ 110/mes**.
 
 **Depois:**
 
-Marcelo rodou Parte A 4 vezes (uma por automacao). Claude Code gerou:
+Marcelo rodou Parte A 4 vezes (uma por automacao). Codex gerou:
 
 ```
 ~/automacoes/
@@ -318,11 +318,11 @@ Marcelo rodou Parte A 4 vezes (uma por automacao). Claude Code gerou:
 
 Cada um com cron rodando. Total de migracao: 6 horas em 2 sabados.
 
-**Custo depois:** R$ 0 (Claude Pro ja paga, scripts rodam no Mac do escritorio).
+**Custo depois:** R$ 0 (Codex Pro ja paga, scripts rodam no Mac do escritorio).
 
 **Economia:** R$ 110/mes = R$ 1.320/ano.
 
-**Bonus inesperado:** ele agora consegue customizar mais — quando quis adicionar logica condicional ("se valor > R$ 1.000, manda alerta especial"), 5 minutos no Claude Code resolveu. No Zapier seria upgrade de plano.
+**Bonus inesperado:** ele agora consegue customizar mais — quando quis adicionar logica condicional ("se valor > R$ 1.000, manda alerta especial"), 5 minutos no Codex resolveu. No Zapier seria upgrade de plano.
 
 ---
 
@@ -388,12 +388,12 @@ Acoes:
 
 ---
 
-## Quando o Claude API custa mais que cron local
+## Quando o Codex API custa mais que cron local
 
-Se o seu script chama Claude API a cada execucao (ex: classificar email, gerar resumo), some o custo:
+Se o seu script chama Codex API a cada execucao (ex: classificar email, gerar resumo), some o custo:
 
 ```
-Custo Claude API ~ R$ 0,30 por 1k tokens entrada + R$ 1,50 por 1k tokens saida (Claude Sonnet)
+Custo da API do Codex: calcule com a tabela vigente da OpenAI conforme o modelo e o volume de tokens.
 Tokens tipicos por execucao: 500-2000
 Custo por execucao: R$ 0,001 - 0,005
 

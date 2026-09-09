@@ -8,7 +8,7 @@ Essas ferramentas sao **wrappers de LLM com templates pre-feitos**. Elas:
 
 1. Pegam um prompt deles
 2. Preenchem com seus inputs
-3. Mandam pra um LLM (em muitos casos, **a propria Claude ou GPT da OpenAI**)
+3. Mandam pra um LLM (em muitos casos, **a propria Codex ou GPT da OpenAI**)
 4. Te entregam a saida
 
 Voce paga pelo template + interface. **O motor (LLM) voce pode usar direto**.
@@ -23,16 +23,16 @@ Voce paga pelo template + interface. **O motor (LLM) voce pode usar direto**.
 | Rytr | Unlimited | US$ 29 (~R$ 160) | US$ 348 |
 | Anyword | Starter | US$ 49 (~R$ 270) | US$ 588 |
 
-vs. **Claude Pro (R$ 110/mes)**: cobre **todas** essas funcoes pra 1 a 5 pessoas.
+vs. **Codex Pro (R$ 110/mes)**: cobre **todas** essas funcoes pra 1 a 5 pessoas.
 
 Economia tipica: R$ 100-250/mes por seat = **R$ 1.200-3.000/ano** se voce so usava 1.
 
-## Volume que cabe no Claude
+## Volume que cabe no Codex
 
 | Volume | Solucao |
 |---|---|
-| Ate 100 textos/mes | Claude Pro web — perfeito |
-| 100-500 textos/mes | Claude Pro web (cabe na assinatura) |
+| Ate 100 textos/mes | Codex Pro web — perfeito |
+| 100-500 textos/mes | Codex Pro web (cabe na assinatura) |
 | 500-2000 textos/mes | Pro + uso eventual de API pra automatizar |
 | 2000+ textos/mes | API direta + script |
 

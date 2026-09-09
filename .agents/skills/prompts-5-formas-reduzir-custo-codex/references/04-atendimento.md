@@ -248,7 +248,7 @@ Voce e um engenheiro fullstack. Sua missao: criar a integracao WhatsApp + Codex 
 ```
 ZAPI_TOKEN=
 ZAPI_INSTANCE=
-ANTHROPIC_API_KEY=
+OPENAI_API_KEY=
 SLACK_WEBHOOK_URL=
 DATABASE_URL=
 ```
@@ -259,7 +259,7 @@ DATABASE_URL=
 atendimento-bot/
 ├── src/
 │   ├── index.{js|py}              # servidor + webhook
-│   ├── claude.{js|py}             # chamadas Codex API
+│   ├── Codex.{js|py}             # chamadas Codex API
 │   ├── whatsapp.{js|py}           # Z-API / Meta integration
 │   ├── db.{js|py}                 # historico de conversas
 │   └── base.md                    # base de conhecimento
@@ -272,10 +272,10 @@ atendimento-bot/
 # Codigo da chamada ao Codex (referencia)
 
 ```javascript
-import Anthropic from '@anthropic-ai/sdk'
+import OpenAI from 'openai'
 import fs from 'fs'
 
-const client = new Anthropic()
+const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 const baseConhecimento = fs.readFileSync('./src/base.md', 'utf-8')
 
 export async function gerarResposta({ historico, mensagemAtual }) {
@@ -284,10 +284,10 @@ export async function gerarResposta({ historico, mensagemAtual }) {
     { role: 'user', content: mensagemAtual }
   ]
 
-  const response = await client.messages.create({
-    model: 'claude-sonnet-4-6',
-    max_tokens: 600,
-    system: `Voce e o atendente. Sua base de conhecimento abaixo:
+  const response = await client.responses.create({
+    model: 'gpt-5.3-codex',
+    max_output_tokens: 600,
+    instructions: `Voce e o atendente. Sua base de conhecimento abaixo:
 
 ${baseConhecimento}
 
@@ -296,10 +296,10 @@ Regras:
 - Maximo 4 linhas
 - Se nao souber, comece resposta com [ESCALAR]
 - Cancelamento/reembolso/reclamacao: [ESCALAR] sempre`,
-    messages
+    input: messages
   })
 
-  return response.content[0].text
+  return response.output_text
 }
 ```
 
@@ -307,7 +307,7 @@ Regras:
 
 1. Codigo completo dos arquivos acima, funcional
 2. README com:
-   - Como conseguir tokens (Z-API e Anthropic)
+   - Como configurar as credenciais (Z-API e OpenAI)
    - Como configurar webhook no Z-API/Meta
    - Como testar local com `ngrok`
    - Como deployar (Vercel/Railway/VPS)

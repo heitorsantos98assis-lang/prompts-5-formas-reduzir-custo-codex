@@ -393,7 +393,7 @@ Acoes:
 Se o seu script chama Codex API a cada execucao (ex: classificar email, gerar resumo), some o custo:
 
 ```
-Custo Codex API ~ R$ 0,30 por 1k tokens entrada + R$ 1,50 por 1k tokens saida (Codex Sonnet)
+Custo da API do Codex: calcule com a tabela vigente da OpenAI conforme o modelo e o volume de tokens.
 Tokens tipicos por execucao: 500-2000
 Custo por execucao: R$ 0,001 - 0,005
 
