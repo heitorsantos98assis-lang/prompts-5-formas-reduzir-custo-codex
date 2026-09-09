@@ -61,4 +61,4 @@ Substituindo por Claude (assinatura Pro R$ 100/mes ou API conforme uso, ~R$ 50-2
 
 ---
 
-**ASV Digital** — produtos@asv.digital
+**HL** — produtos@HL.digital
